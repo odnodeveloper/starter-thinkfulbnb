@@ -98,6 +98,7 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  flex-wrap: wrap;
 }
 
 form label {
@@ -179,4 +180,7 @@ p, li {
   form button {
     flex: 1; /* make the button take up as much space as it can */
   }
+}
+
+@media all and (min-width: 481px and max-width: 980px) {
 }
