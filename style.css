@@ -38,7 +38,6 @@ main img {
 
 .group {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -96,6 +95,7 @@ header nav ul li a:hover {
 /* -------  Search Form ------- */
 form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   border: 2px solid #ff385c;
   padding: 5px;
@@ -147,7 +147,7 @@ p, li {
 
 /* styles for Desktop view */
 @media all and (min-width: 480px) {
- 
+
   .group {
     display: flex;
     flex-direction: column;
@@ -181,6 +181,7 @@ p, li {
 
   form {
     display: flex;
+    flex-direction: row; /* added this line, because in media query, default doesn't work */
     justify-content: space-between;
     align-items: center;
   }
