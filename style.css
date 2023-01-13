@@ -39,6 +39,7 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .item {
@@ -53,8 +54,7 @@ main img {
 /* -------  Navigation ------- */
 
 header {
-  display: flex;
-  flex-direction: column;
+  display: block; /* flex bish block baij baij responsive bolj bn */
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
@@ -69,14 +69,13 @@ header {
 
 header nav {
   display: flex;
-  flex-direction: column;
-  padding: 20px;
+  justify-content: center;
 }
 
 header nav ul {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  padding-left: 0;
+  list-style: none;
 }
 
 header nav ul li {
@@ -96,12 +95,14 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
+  display: flex;
+  justify-content: center;
   border: 2px solid #ff385c;
-  padding: 10px;
-  flex-wrap: wrap;
+  padding: 5px;
 }
 
 form label {
+  display: flex;
   font-weight: bold;
 }
 
@@ -112,8 +113,9 @@ form div {
 
 form select,
 form input {
+  display: flex;
   margin-bottom: 20px;
-  width: 180px;
+  width: 60%; /* separate the input boxes */
 }
 
 form button {
@@ -145,10 +147,17 @@ p, li {
 
 /* styles for Desktop view */
 @media all and (min-width: 480px) {
-
+ 
   .group {
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+  }
+
+  .group2 {
+    display:flex;
     align-items: center;
+
   }
 
   .logo {
@@ -156,7 +165,7 @@ p, li {
     padding-top: 0;
     font-size: 42px;
   }
-
+ 
   header {
     display: flex;
     justify-content: space-between;
@@ -164,23 +173,20 @@ p, li {
   }
 
   header nav ul {
-    align-items: center;
+    display: flex;
+    align-items: center;  /* align text in the center of the row */
+    padding-left: 0;
+    justify-content: space-between;
   }
 
   form {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-  }
-
-  form div {
-    flex-direction: column;
   }
 
   form button {
     flex: 1; /* make the button take up as much space as it can */
   }
-}
 
-@media all and (min-width: 481px and max-width: 980px) {
 }
